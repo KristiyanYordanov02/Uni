@@ -16,7 +16,7 @@ namespace MovieStore.Controllers
 
         public MoviesController(
             IMovieService movieService,
-            IMapper mapper, 
+            IMapper mapper,
             ILogger<MoviesController> logger)
         {
             _movieService = movieService;
@@ -26,7 +26,7 @@ namespace MovieStore.Controllers
 
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [HttpGet("GetAll")]
+        [HttpGet("GetAllMovieWithDetails")]
         public IActionResult Get()
         {
             var result = _movieService.GetAllMovies();
